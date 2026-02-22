@@ -1,8 +1,8 @@
 import { useState, useContext } from "react";
-import { TrackContext } from "../context/TrackContext"; // ✅ capital C
+import { TrackContext } from "../context/TrackContext"; 
 
 function TrackRow({ track }) {
-  const { favourites, toggleFavourite } = useContext(TrackContext); // ✅ works now
+  const { favourites, toggleFavourite } = useContext(TrackContext); 
   const isFav = favourites.find(t => t.id === track.id);
   const [animate, setAnimate] = useState(false);
 
