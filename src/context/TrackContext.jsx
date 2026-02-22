@@ -1,9 +1,9 @@
 import { createContext, useState } from "react";
 
-// ✅ Context name must match everywhere
+
 export const TrackContext = createContext();
 
-// ✅ Provider name with capital P
+
 export const TrackProvider = ({ children }) => {
   const [favourites, setFavourites] = useState([]);
 
@@ -35,5 +35,5 @@ export const TrackProvider = ({ children }) => {
 
   const value = { tracks, favourites, toggleFavourite };
 
-  return <TrackContext.Provider value={value}>{children}</TrackContext.Provider>; // ✅ exact capitalization
+  return <TrackContext.Provider value={value}>{children}</TrackContext.Provider>; 
 };
